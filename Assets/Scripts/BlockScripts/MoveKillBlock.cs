@@ -17,11 +17,8 @@ public class MoveKillBlock : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
-
-
         if (activate == true)
         {
             move();
@@ -31,8 +28,8 @@ public class MoveKillBlock : MonoBehaviour
 
     public void move()
     {
-        moveHold = new Vector2(transform.position.x + movePath.x, transform.position.y + movePath.y);
-        transform.position = Vector2.Lerp(transform.position, moveHold, 0.5f);
+        moveHold = new Vector2(transform.position.x + (movePath.x / 100), transform.position.y + (movePath.y / 100));
+        transform.position = Vector2.Lerp(transform.position, moveHold, 1);
     }
 
     public void triggered()
@@ -40,7 +37,7 @@ public class MoveKillBlock : MonoBehaviour
         activate = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && activate == true)
         {
