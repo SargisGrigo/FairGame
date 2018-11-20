@@ -9,8 +9,6 @@ public class PlayerInput : MonoBehaviour
     private Player player;
     private Animator anime;
 
-    int jumpHash = Animator.StringToHash("Jump");
-
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -26,7 +24,6 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             audioSource.PlayOneShot(jumpSound);
-            anime.SetTrigger(jumpHash);
             player.OnJumpInputDown();
         }
 

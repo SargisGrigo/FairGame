@@ -27,6 +27,9 @@ public class Player : MonoBehaviour
     private Vector3 velocity;
     private float velocityXSmoothing;
 
+    public AudioClip deathSound;
+    private AudioSource audioSource;
+
     private Controller2D controller;
 
     private Vector2 directionalInput;
@@ -139,4 +142,15 @@ public class Player : MonoBehaviour
         velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below ? accelerationTimeGrounded : accelerationTimeAirborne));
         velocity.y += gravity * Time.deltaTime;
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Kill")
+        {
+            Debug.Log("DEATH!");
+            audioSource.PlayOneShot(deathSound);
+        }
+    }
+
+
 }
