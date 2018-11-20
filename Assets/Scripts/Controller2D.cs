@@ -62,6 +62,7 @@ public class Controller2D : RaycastController
 
     private void HorizontalCollisions(ref Vector2 moveAmount)
     {
+        Debug.Log("collide x");
         float directionX = collisions.faceDir;
         float rayLength = Mathf.Abs(moveAmount.x) + skinWidth;
 
@@ -168,6 +169,7 @@ public class Controller2D : RaycastController
 
     private void VerticalCollisions(ref Vector2 moveAmount)
     {
+        Debug.Log("collide y");
         float directionY = Mathf.Sign(moveAmount.y);
         float rayLength = Mathf.Abs(moveAmount.y) + skinWidth;
 

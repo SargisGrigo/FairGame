@@ -34,4 +34,13 @@ sysinfo.txt
 
 # Builds
 *.apk
+<<<<<<< HEAD
 *.unitypackage
+.vs/FairGame/v15/Server/sqlite3/db.lock
+.vs/FairGame/v15/Server/sqlite3/storage.ide
+.vs/FairGame/v15/Server/sqlite3/storage.ide-shm
+.vs/FairGame/v15/Server/sqlite3/storage.ide-wal
+.vs/Unfair/v15/Server/sqlite3/db.lock
+=======
+*.unitypackage
+>>>>>>> origin/GAB
