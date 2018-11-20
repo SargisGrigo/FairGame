@@ -10,16 +10,20 @@ public class Controller2D : RaycastController
     [HideInInspector]
     public Vector2 playerInput;
 
+    private Animator myAnimator;
+
     public override void Start()
     {
         base.Start();
 
         collisions.faceDir = 1;
+        myAnimator = GetComponent<Animator>();
+
     }
 
     public void Move(Vector2 moveAmount, bool standingOnPlatform = false)
     {
-        Move(moveAmount, Vector2.zero, standingOnPlatform);
+
     }
 
     public void Move(Vector2 moveAmount, Vector2 input, bool standingOnPlatform = false)
@@ -28,6 +32,8 @@ public class Controller2D : RaycastController
         collisions.Reset();
         collisions.moveAmountOld = moveAmount;
         playerInput = input;
+
+        myAnimator.SetFloat("speed", Mathf.Abs(moveAmount.x));
 
         if (moveAmount.x != 0)
         {

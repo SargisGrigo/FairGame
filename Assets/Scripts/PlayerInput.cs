@@ -24,6 +24,10 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             audioSource.PlayOneShot(jumpSound);
+<<<<<<< HEAD
+=======
+            anime.SetTrigger(jumpHash);
+>>>>>>> origin/GAB
             player.OnJumpInputDown();
         }
 
