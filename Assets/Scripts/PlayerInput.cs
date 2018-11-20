@@ -3,6 +3,9 @@
 [RequireComponent(typeof(Player))]
 public class PlayerInput : MonoBehaviour
 {
+    public AudioClip jumpSound;
+
+    private AudioSource audioSource;
     private Player player;
     private Animator anime;
 
@@ -10,6 +13,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         player = GetComponent<Player>();
         anime = GetComponentInChildren<Animator>();
     }
@@ -21,6 +25,7 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            audioSource.PlayOneShot(jumpSound);
             anime.SetTrigger(jumpHash);
             player.OnJumpInputDown();
         }
