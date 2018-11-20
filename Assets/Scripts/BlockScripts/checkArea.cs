@@ -23,7 +23,6 @@ public class checkArea : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log(other.tag);
             if (GetComponentInParent<MoveKillBlock>())
             {
                 GetComponentInParent<MoveKillBlock>().triggered();
