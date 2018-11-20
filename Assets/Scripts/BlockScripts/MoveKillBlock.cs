@@ -42,10 +42,10 @@ public class MoveKillBlock : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && activate == true)
         {
             //kill player
-            //collision.gameObject.GetComponent<>();
+            collision.gameObject.GetComponent<Player>();
         }
     }
 
