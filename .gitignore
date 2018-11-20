@@ -35,3 +35,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 .vs/FairGame/v15/Server/sqlite3/db.lock
+.vs/Unfair/v15/Server/sqlite3/storage.ide-wal
+.vs/Unfair/v15/Server/sqlite3/db.lock
+.vs/Unfair/v15/Server/sqlite3/storage.ide
+.vs/Unfair/v15/Server/sqlite3/storage.ide-shm
