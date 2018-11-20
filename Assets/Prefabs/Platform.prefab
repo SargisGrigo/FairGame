@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4015373012770174}
   - component: {fileID: 212191203476994746}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4162980633515366}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4309452527415934}
   - component: {fileID: 212981474391346578}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4376587826928442}
   - component: {fileID: 61947135904915926}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Through
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4994190342365400}
   - component: {fileID: 212153093526259842}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1445725388843924}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1282784, y: -2.8394172, z: 0}
+  m_LocalPosition: {x: 0.7887111, y: -3.852663, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4162980633515366}
@@ -171,7 +171,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.007426262, y: 0.04453391}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -182,7 +182,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 0.7}
+  m_Size: {x: 3.1336727, y: 0.78906786}
   m_EdgeRadius: 0
 --- !u!212 &212153093526259842
 SpriteRenderer:

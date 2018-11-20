@@ -4,10 +4,14 @@
 public class PlayerInput : MonoBehaviour
 {
     private Player player;
+    private Animator anime;
+
+    int jumpHash = Animator.StringToHash("Jump");
 
     private void Start()
     {
         player = GetComponent<Player>();
+        anime = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -17,6 +21,7 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            anime.SetTrigger(jumpHash);
             player.OnJumpInputDown();
         }
 
