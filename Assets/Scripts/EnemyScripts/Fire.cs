@@ -33,6 +33,15 @@ public class Fire : MonoBehaviour
     {
         GameObject shot;
         shot = Instantiate(bullet, transform.position, transform.rotation, transform);
+        shot.transform.localScale = bullet.transform.localScale;
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+        }
+
+    }
 }

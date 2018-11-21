@@ -10,7 +10,6 @@ public class Chase : MonoBehaviour
 
     float moveX, moveY;
 
-    Vector2 move;
     Vector2 moveHold;
 
     GameObject player;
@@ -28,8 +27,6 @@ public class Chase : MonoBehaviour
     {
         if (player != null)
         {
-
-
             if (player.transform.position.x < transform.position.x)
             {
                 moveX = -speedHold;
@@ -56,9 +53,18 @@ public class Chase : MonoBehaviour
                 moveY = 0;
             }
 
-            moveHold = new Vector2(transform.position.x + move.x, transform.position.y + move.y);
+            moveHold = new Vector2(transform.position.x + moveX, transform.position.y + moveY);
             transform.position = Vector2.Lerp(transform.position, moveHold, 1);
 
         }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+        }
+
     }
 }

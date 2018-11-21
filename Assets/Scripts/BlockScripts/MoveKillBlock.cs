@@ -19,9 +19,6 @@ public class MoveKillBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-
         if (activate == true)
         {
             move();
@@ -40,12 +37,12 @@ public class MoveKillBlock : MonoBehaviour
         activate = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && activate == true)
         {
             //kill player
-            //collision.gameObject.GetComponent<>();
+            Destroy(collision.gameObject);
         }
     }
 
