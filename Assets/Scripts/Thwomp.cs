@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Thwomp : MonoBehaviour
 {
-
+    public GameObject player;
     private List<Vector3> positions = new List<Vector3>();
     Transform[] places;
     Vector3 nextPos;
@@ -30,6 +30,12 @@ public class Thwomp : MonoBehaviour
         while (Vector3.Distance(this.transform.position, endPos.transform.position) > 0.1)
         {
             this.transform.position = Vector3.MoveTowards(transform.position, nextPos, speed);
+
+            if(Vector3.Distance(transform.position, player.transform.position) < 1)
+            {
+                Destroy(player.gameObject);
+            }
+
             yield return new WaitForFixedUpdate();
         }
     }
