@@ -18,16 +18,14 @@ public class JetpackBehaviour : MonoBehaviour {
         {
             if (Vector3.Distance(player.transform.position, transform.position) < 1.2f)
             {
-                Destroy(player.gameObject.GetComponent<Collider2D>());
                 picked = true;
             }
         }
 
         if (picked)
         {
-            
             Vector3 offset = new Vector3(-0.2f , 0, 0);
-            player.transform.Translate(new Vector2(0 ,0.4f));
+            player.transform.Translate(new Vector2(0 ,0.14f));
             transform.position = player.transform.position + offset;
 
             if (transform.position.y > 13)
