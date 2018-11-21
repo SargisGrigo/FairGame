@@ -24,34 +24,39 @@ public class Chase : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(player.transform.position.x < transform.position.x)
+        if (player != null)
         {
-            moveX = -speedHold;
-        }
-        else if(player.transform.position.x > transform.position.x)
-        {
-            moveX = speedHold;
-        }
-        else
-        {
-            moveX = 0;
-        }
 
-        if (player.transform.position.y < transform.position.y)
-        {
-            moveY = -speedHold;
-        }
-        else if (player.transform.position.y > transform.position.y)
-        {
-            moveY = speedHold;
-        }
-        else
-        {
-            moveY = 0;
-        }
 
-        moveHold = new Vector2(transform.position.x + move.x, transform.position.y + move.y);
-        transform.position = Vector2.Lerp(transform.position, moveHold, 1);
+            if (player.transform.position.x < transform.position.x)
+            {
+                moveX = -speedHold;
+            }
+            else if (player.transform.position.x > transform.position.x)
+            {
+                moveX = speedHold;
+            }
+            else
+            {
+                moveX = 0;
+            }
 
+            if (player.transform.position.y < transform.position.y)
+            {
+                moveY = -speedHold;
+            }
+            else if (player.transform.position.y > transform.position.y)
+            {
+                moveY = speedHold;
+            }
+            else
+            {
+                moveY = 0;
+            }
+
+            moveHold = new Vector2(transform.position.x + move.x, transform.position.y + move.y);
+            transform.position = Vector2.Lerp(transform.position, moveHold, 1);
+
+        }
     }
 }

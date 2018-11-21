@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9d0df55d9d9fa48bba1b2288457a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frequency: 2
   bullet: {fileID: 1347030157407224, guid: c560d991d06982c40b7f676f499088c5, type: 2}
 --- !u!135 &135503300500396894
 SphereCollider:
