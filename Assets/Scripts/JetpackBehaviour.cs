@@ -25,7 +25,7 @@ public class JetpackBehaviour : MonoBehaviour {
         if (picked)
         {
             Vector3 offset = new Vector3(-0.2f , 0, 0);
-            player.transform.Translate(new Vector2(0 ,0.2f));
+            player.transform.Translate(new Vector2(0 ,0.14f));
             transform.position = player.transform.position + offset;
 
             if (transform.position.y > 13)
