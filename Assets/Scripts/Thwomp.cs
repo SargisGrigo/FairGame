@@ -31,9 +31,12 @@ public class Thwomp : MonoBehaviour
         {
             this.transform.position = Vector3.MoveTowards(transform.position, nextPos, speed);
 
-            if(Vector3.Distance(transform.position, player.transform.position) < 1)
+            if (player != null)
             {
-                Destroy(player.gameObject);
+                if (Vector3.Distance(transform.position, player.transform.position) < 1)
+                {
+                    Destroy(player.gameObject);
+                }
             }
 
             yield return new WaitForFixedUpdate();

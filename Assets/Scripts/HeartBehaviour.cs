@@ -13,10 +13,13 @@ public class HeartBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Vector3.Distance(transform.position, player.transform.position) < 1)
+        if (player != null)
         {
-            Destroy(gameObject);
-            Destroy(player.gameObject);
+            if (Vector3.Distance(transform.position, player.transform.position) < 1)
+            {
+                Destroy(gameObject);
+                Destroy(player.gameObject);
+            }
         }
 	}
 }
