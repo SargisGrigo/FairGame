@@ -16,7 +16,7 @@ public class Thwomp : MonoBehaviour
 
     public void Start()
     {
-        endPos = GameObject.Find("EndPoint");
+        endPos = gameObject.transform.GetChild(1).gameObject;
         nextPos = endPos.transform.position;
     }
 
