@@ -33,7 +33,7 @@ public class Thwomp : MonoBehaviour
 
             if (player != null)
             {
-                if (Vector3.Distance(transform.position, player.transform.position) < 1)
+                if (Vector3.Distance(transform.position, player.transform.position) < 0.85)
                 {
                     Destroy(player.gameObject);
                 }
