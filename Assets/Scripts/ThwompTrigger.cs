@@ -5,7 +5,7 @@ using UnityEngine;
 public class ThwompTrigger : MonoBehaviour
 {
     GameObject player;
-    GameObject thwomp;
+    Thwomp thwomp;
     Thwomp thwompScript;
     AudioSource audio;
     public AudioClip audioClip;
@@ -15,8 +15,7 @@ public class ThwompTrigger : MonoBehaviour
     {
         audio = GetComponent<AudioSource>();
         player = GameObject.Find("Player");
-        thwomp = GameObject.Find("Thwomp");
-        thwompScript = thwomp.GetComponent<Thwomp>();
+        thwomp = gameObject.transform.GetComponentInParent<Thwomp>();
     }
 
     // Update is called once per frame
@@ -26,7 +25,7 @@ public class ThwompTrigger : MonoBehaviour
         {
             if (Vector3.Distance(player.transform.position, transform.position) < 0.7f)
             {
-                thwompScript.MoveDown();
+                thwomp.MoveDown();
                 audio.PlayOneShot(audioClip);
             }
         }

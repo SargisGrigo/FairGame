@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4130660797260500}
   - component: {fileID: 212082957382073452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4060943438664650}
   - component: {fileID: 212655866652043440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4112468423384692}
   - component: {fileID: 61767369834338488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FLoorMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

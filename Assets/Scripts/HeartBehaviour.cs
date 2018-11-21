@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class HeartBehaviour : MonoBehaviour {
 
+    public enum HeartType {
+        Fake,
+        Real,
+        Spike
+    }
+
+    public HeartType type;
+
     GameObject player;
 
     // Use this for initialization
@@ -17,8 +25,21 @@ public class HeartBehaviour : MonoBehaviour {
         {
             if (Vector3.Distance(transform.position, player.transform.position) < 1)
             {
-                Destroy(gameObject);
-                Destroy(player.gameObject);
+                switch (type)
+                {
+                    case HeartType.Fake:
+                        Destroy(gameObject);
+                        break;
+                    case HeartType.Real:
+                        Destroy(gameObject);
+                        Destroy(player.gameObject);
+                        break;
+                    case HeartType.Spike:
+                        Destroy(player.gameObject);
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 	}

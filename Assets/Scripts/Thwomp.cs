@@ -12,11 +12,12 @@ public class Thwomp : MonoBehaviour
     float distance;
     int nextLocation = 0;
     public float speed = 5;
-    public GameObject endPos;
+    private GameObject endPos;
+    public float objectSize = 1.0f;
 
     public void Start()
     {
-        endPos = GameObject.Find("EndPoint");
+        endPos = gameObject.transform.GetChild(1).gameObject;
         nextPos = endPos.transform.position;
     }
 
@@ -33,7 +34,7 @@ public class Thwomp : MonoBehaviour
 
             if (player != null)
             {
-                if (Vector3.Distance(transform.position, player.transform.position) < 1)
+                if (Vector3.Distance(transform.position, player.transform.position) < objectSize)
                 {
                     Destroy(player.gameObject);
                 }
