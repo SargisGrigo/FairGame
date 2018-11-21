@@ -25,7 +25,7 @@ public class ThwompTrigger : MonoBehaviour
         {
             if (Vector3.Distance(player.transform.position, transform.position) < 0.7f)
             {
-                thwomp.MoveDown();
+                thwomp.MoveDirection();
                 audio.PlayOneShot(audioClip);
             }
         }

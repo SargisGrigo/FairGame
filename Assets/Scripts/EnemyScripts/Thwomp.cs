@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Thwomp : MonoBehaviour
 {
-    public GameObject player;
     private List<Vector3> positions = new List<Vector3>();
     Transform[] places;
     Vector3 nextPos;
@@ -15,13 +14,16 @@ public class Thwomp : MonoBehaviour
     private GameObject endPos;
     public float objectSize = 1.0f;
 
+    //Only assign this in the inspector if the object is meant to kill the player
+    public GameObject player;
+
     public void Start()
     {
         endPos = gameObject.transform.GetChild(1).gameObject;
         nextPos = endPos.transform.position;
     }
 
-    public void MoveDown()
+    public void MoveDirection()
     {
         StartCoroutine(Moving());
     }
