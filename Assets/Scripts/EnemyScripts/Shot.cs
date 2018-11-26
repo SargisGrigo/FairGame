@@ -20,4 +20,13 @@ public class Shot : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x - speedHold, transform.position.y, 0);
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+        }
+
+    }
 }

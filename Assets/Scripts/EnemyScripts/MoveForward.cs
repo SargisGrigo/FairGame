@@ -25,6 +25,19 @@ public class MoveForward : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        move = new Vector2(move.x * -1, move.y * -1);
+        if(collision.gameObject.tag != "Through")
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                move = new Vector2(move.x * -1, move.y * -1);
+            }
+            
+        }
+
+        
     }
 }
